@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body>
+  <header class="header">
+    <div class="player">
+<audio src=""></audio>
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
+      </div>
+      <ul class="play-list"></ul>
+    </div>
+    <div class="weather">
+      <input type="text" class="city" placeholder="Moscow">
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time"></time>
+    <date class="date"></date>
+    <div class="greeting-container">
+      <span class="greeting" id="greeting"></span>
+      <input type="text" class="name" name="Placehold" placeholder="[Enter your name]"/>
+    </div>
+<div class="under-main">
+<fieldset class="settings-container">
+        <ul>
+       
+	<li>
+            <label class="input-label label-language" for="language" id="lg">Language:</label>
+            <select name="language" id="language" class="language">
+              <option value="en">English</option>
+              <option value="ru">Русский</option>
+            </select>
+
+          </li>
+
+ <!--   
+          <li>
+            <label class="input-label label-image" for="image-source">Image source:</label>
+            <select name="image-source" id="image-source" class="image-source">
+              <option value="github" selected="selected">GitHub</option>
+              <option value="unsplash">Unsplash API</option>
+              <option value="flickr">Flickr API</option>
+            </select>            
+          </li>
+          <li class="tags-container hidden">
+            <label class="input-label label-tags" for="tags">Tags for background:</label>
+            <input type="text" name="tags" class="tags" id="tags">
+          </li>
+-->
+          <li>
+            <label class="checkbox-label label-time" id="time-checkbox-label">
+              <span class="switch-span time-span" id="timeSet">Time</span>
+              <input type="checkbox" class="checkbox-input" id="time-checkbox-input" checked="checked">
+              <span class="checkbox-switch"></span>
+            </label>
+          </li>
+          <li>
+            <label class="checkbox-label label-date" id="date-checkbox-label">
+              <span class="switch-span date-span" id="dateSet">Date</span>
+              <input type="checkbox" class="checkbox-input" id="date-checkbox-input" checked="checked">
+              <span class="checkbox-switch"></span>
+            </label>
+          </li>
+          <li>
+            <label class="checkbox-label label-greeting" id="greeting-checkbox-label">
+              <span class="switch-span greeting-span" id="grSet">Greeting</span>
+              <input type="checkbox" class="checkbox-input" id="greeting-checkbox-input" checked="checked">
+              <span class="checkbox-switch"></span>
+            </label>
+          </li>
+          <li>
+            <label class="checkbox-label label-quote" id="quote-checkbox-label">
+              <span class="switch-span quote-span" id="quoSet">Quote of the day</span>
+              <input type="checkbox" class="checkbox-input" id="quote-checkbox-input" checked="checked">
+              <span class="checkbox-switch"></span>
+            </label>
+          </li>
+          <li>
+            <label class="checkbox-label label-weather" id="weather-checkbox-label">
+              <span class="switch-span weather-span" id="weaSet">Weather forecast</span>
+              <input type="checkbox" class="checkbox-input" id="weather-checkbox-input" checked="checked">
+              <span class="checkbox-switch"></span>
+            </label>
+          </li>
+          <li class="player-li">
+            <label class="checkbox-label label-player" id="player-checkbox-label">
+              <span class="switch-span player-span" id="auSet">Audio player</span>
+              <input type="checkbox" class="checkbox-input" id="player-checkbox-input" checked="checked">
+              <span class="checkbox-switch"></span>
+            </label>
+          </li>
+          <li>
+            <label class="checkbox-label label-todo" id="todo-checkbox-label">
+              <span class="switch-span todo-span" id="toDoLg1">ToDo list</span>
+              <input type="checkbox" class="checkbox-input" id="todo-checkbox-input" checked="checked">
+              <span class="checkbox-switch"></span>
+            </label>
+       </li>
+
+        </ul>
+      </fieldset>
+<div class="todolist">
+<h4 class="text-center heading" id="toDoLg">ToDo List</h4>
+
+<div class="row">
+  <div class="columns large-8 large-offset-2">
+    <div class="columns medium-8">
+      <input class="todoinput" id="todo-input" type="text" />
+    </div>
+    <div class="columns medium-4">
+      <button class="add" onclick="addItem()" class="button expanded" id="addToDo">Add ToDo List</button>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="columns medium-8 medium-offset-2">
+  <ol id="list-items">
+  </ol>
+  </div>
+</div>
+
+</div>
+</div>
+  </main>
+  <footer class="footer">
+<div class="footerdata">    
+<div class="setting">
+    <button id="btn" class="settings-btn"></button>
+    
+<div class="overlay hidden"></div>
+      
+    </div>
+<div class="quote-container">
+     <button class="change-quote"></button>
+
+    <div>
+      <div class="quote"></div>
+      <div class="author"></div>
+    </div>
+</div>
+       <div class="container">      
+           <ul class="footer-list">
+             <li><b>2022</b></li>
+             <li><a href="https://github.com/lkhgvjgfxdrdhxtfc"><img  class="giticon" src="./assets/svg/git1.png" alt="My Github" width="45" height="45"></a></li>
+             <li><a href ="https://rs.school/js-stage0/"><img src="./assets/svg/rss.svg" alt="RS School" width="45" height="45"></a></li>
+           </ul>
+      </div>
+</div>
+    </div>
+  </footer>
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
